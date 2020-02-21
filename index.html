@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <script>
+        function setBorderRadius() {
+            square = document.querySelector('.r-corner');
+            input = document.querySelector('#input-TopLeft');
+            square.style.borderTopLeftRadius = `${input.value}%`;
+
+            input = document.querySelector('#input-TopRight');
+            square.style.borderTopRightRadius = `${input.value}%`;
+
+            input = document.querySelector('#input-BottomLeft');
+            square.style.borderBottomLeftRadius = `${input.value}%`;
+
+            input = document.querySelector('#input-BottomRight');
+            square.style.borderBottomRightRadius = `${input.value}%`;
+        }
+    </script>
+    <style>
+        .r-corner {
+            width: 250px;
+            height: 250px;
+            padding: 50px;
+            margin: 20px;
+            background: #2c018f;
+        }
+
+        #boxInput {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            /* padding: 10px; */
+        }
+
+        #boxInput input {
+            margin-top: 1px;
+            margin-bottom: 10px;
+            width: 50px;
+        }
+    </style>
+    <body>
+        <input />
+        <div class="r-corner"></div>
+        <form>
+            <h3>Dimensoes Bordas</h3>
+            <div id="boxInput">
+                <div>
+                    <label>Top Left</label>
+                    <input
+                        type="text"
+                        id="input-TopLeft"
+                        placeholder="TopLeft"
+                        value="25"
+                    />
+                </div>
+
+                <div>
+                    <label>Top Right</label>
+                    <input
+                        type="text"
+                        id="input-TopRight"
+                        placeholder="TopRight"
+                        value="25"
+                    />
+                </div>
+                <div>
+                    <label>Bottom Left</label>
+                    <input
+                        type="text"
+                        id="input-BottomLeft"
+                        placeholder="BottomLeft"
+                        value="25"
+                    />
+                </div>
+                <div>
+                    <label>Bottom Right</label>
+                    <input
+                        type="text"
+                        id="input-BottomRight"
+                        placeholder="BottomRight"
+                        value="25"
+                    />
+                </div>
+                <button type="button" onClick="setBorderRadius()" prev>
+                    Alterar
+                </button>
+            </div>
+        </form>
+    </body>
+</html>
